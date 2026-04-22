@@ -17,8 +17,9 @@ import CloseIcon from '@mui/icons-material/Close';
 
 import io from "socket.io-client";
 import { Link } from 'react-router-dom';
+import server from '../Environment';
 
-const server_url = "http://localhost:3000";
+const server_url = server.prod;
 
 var connections = {};
 var iceCandidateQueue = {}; 

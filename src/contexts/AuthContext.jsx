@@ -3,12 +3,13 @@ import { createContext } from "react";
 import axios from 'axios';
 import  httpStatus  from "http-status";
 import { useContext, useState } from "react";
+import server from "../Environment";
 
 
   const AuthContext =createContext({});
 
 const client =axios.create({
-    baseURL:"http://localhost:3000/api/users"
+    baseURL:server.prod+"/api/users"
 });
 
 
